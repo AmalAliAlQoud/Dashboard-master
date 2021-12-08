@@ -37,7 +37,7 @@
 
 
     <!-- Sidebar -->
-    <div>
+    <div class="container-fluid">
         <div>
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
@@ -63,9 +63,10 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Conversion rates</h5>
                             <p class="card-text">3.75%</p>
-                            <span class="d-grid gap-2 border"><a href="#" class="link-primary text-start">View
-                                    details</a></span>
                         </div>
+                        <div class="card-footer text-muted">
+                            View details
+                          </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -73,9 +74,10 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Conversion rates</h5>
                             <p class="card-text">3.75%</p>
-                            <span class="d-grid gap-2 border"><a href="#" class="link-primary text-start">View
-                                    details</a></span>
                         </div>
+                        <div class="card-footer text-muted">
+                            View details
+                          </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -83,19 +85,21 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Conversion rates</h5>
                             <p class="card-text">3.75%</p>
-                            <span class="d-grid gap-2 border"><a href="#" class="link-primary text-start">View
-                                    details</a></span>
                         </div>
+                        <div class="card-footer text-muted">
+                            View details
+                          </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="card-title">Conversion rates</h5>
-                            <p class="card-text">3.75%</p>
-                            <span class="d-grid gap-2 border"><a href="#" class="link-primary text-start">View
-                                    details</a></span>
+                            <p class="card-text">3.75%</p>   
                         </div>
+                        <div class="card-footer text-muted">
+                            View details
+                          </div>
                     </div>
                 </div>
             </div>
@@ -134,8 +138,8 @@
                             <span class="m-lg-2">Visitors Cites</span>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
+                            <canvas id="myPieChart" width="900" height="400"></canvas>
+                            <script src="/js/charts.js"></script>
                         </div>
                     </div>
                 </div>
@@ -146,6 +150,8 @@
                             <span class="m-lg-2">Customers Rat</span>
                         </div>
                         <div class="card-body">
+                            <canvas id="myLinerChart" width="900" height="400"></canvas>
+                            <script src="/js/charts.js"></script>
                         </div>
                     </div>
                 </div>
