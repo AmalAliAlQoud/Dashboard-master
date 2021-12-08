@@ -1,11 +1,31 @@
 
 // Line Chart for Orders
-var ordersChart = document.getElementById("myAreaChart");
+//var ordersChart = document.getElementById("myAreaChart");
+var ordersChart = document.getElementById("myareaChart");
+
+var stars = [135850, 52122, 148825, 16939, 9763];
+var frameworks = ["React", "Angular", "Vue", "Hyperapp", "Omi"];
+
+var myChart = new Chart(ordersChart, {
+  type: "line",
+  data: {
+    labels: frameworks,
+    datasets: [
+      {
+        label: "Github Stars",
+        data: stars,
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+      }
+    ]
+  }
+});
 
 // Bar Chart for Visitor
 //var visitorChart = document.getElementById("myBarChart");
-    var ctx = document.getElementById("myBarChart");
-                                var myChart = new Chart(ctx, {
+    var visitorChart = document.getElementById("myBarChart");
+                                var myChart = new Chart(visitorChart, {
                                     type: 'bar',
                                     data: {
                                         labels: ["June", "July", "August", "September", "October", "November", "December"],
