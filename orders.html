@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js">
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+
+
+
+
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <h3 class="text-light">Nrt Solution</h3>
+        <a href="#">home</a>
+        <a href="#">Products</a>
+        <a href="#">Orders</a>
+        <a href="#">Reports</a>
+        <a href="#">Customers</a>
+
+      </div>
+      
+     
+      
+        <span id="main" class="openbtn" onclick="openNav()">☰</span>  
+
+
+    <!-- page content -->
+    <div class="container-fluid">
+        
+        <div class="mb-3 mt-3">
+            <li>Home Page</li>
+        </div>
+            <!-- Navbar -->
+        <div>
+            <nav class="navbar navbar-light bg-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand topnav">Nrt Solution</a>
+                    <!-------Navbar mennue------------->
+                    <div>
+                        <a href="#home"></a>
+                        <div id="myLinks" class="dropdown-menu text-small shadow">
+                            <a href="#news" class="dropdown-item">News</a>
+                            <a href="#contact" class="dropdown-item">Contact</a>
+                            <a href="#about" class="dropdown-item">About</a>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <!------ Navbar search--------->
+                    <div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            
+                        <!------ Navbar login--------->
+                            <div class="align-self-center m-1">
+                                <a  onclick="myFunction2()">
+                                    <i style='font-size:28px' class='fas'>&#xf406;</i>
+                                    
+                                </a>
+                            </div>
+                        </form>
+                        <div  class="d-flex justify-content-end">
+                        <div id="myLinks2" class="dropdown-menu text-small shadow">
+                            <a href="#news" class="dropdown-item">settings</a>
+                            <a href="#contact" class="dropdown-item">New Orders</a>
+                            <a href="#about" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- The Main Content -->
+        
+
+                <body>
+
+
+                    <button class="open-button" onclick="openForm()">Chat</button>
+
+                    <div class="chat-popup" id="myForm">
+                        <form action="/action_page.php" class="form-container">
+                            <h1>Chat</h1>
+
+                            <label for="msg"><b>Message</b></label>
+                            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                            <button type="submit" class="btn">Send</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                    <script>
+ function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+
+                        function myFunction() {
+                            var x = document.getElementById("myLinks");
+                            if (x.style.display === "block") {
+                                x.style.display = "none";
+                            } else {
+                                x.style.display = "block";
+                            }
+                        }
+
+                        function myFunction2() {
+                            var x = document.getElementById("myLinks2");
+                            if (x.style.display === "block") {
+                                x.style.display = "none";
+                            } else {
+                                x.style.display = "block";
+                            }
+                        }
+
+                        //Script.js
+
+                        $(document).ready(function () { //Use ready to make a function available after the document is loaded
+                            $(".nav").click(function () {
+                                $("#hamburger").toggle(250);
+                            });
+                        });
+
+
+
+
+                        function openForm() {
+                            document.getElementById("myForm").style.display = "block";
+                        }
+
+                        function closeForm() {
+                            document.getElementById("myForm").style.display = "none";
+                        }
+                    </script>
+                    <!-- Reports Chart -->
+
+
+
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+                    </script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+                    </script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js">
+                    </script>
+
+                    <!-- Include the JavaScript file
+  for Bootstrap table -->
+                    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+                    </script>
+
+                    <script>
+
+
+                        $(document).ready(function () {
+                            $('#table').DataTable({
+                                'ajax': {
+                                    'url': '/json/data.json',
+                                    'dataSrc': 'data',
+                                    'columns': [
+                                        { "data": "name" },
+                                        { "data": "address" },
+                                        { "data": "city" },
+                                        { "data": "age" },
+                                        { "data": "last visit" },
+                                        { "data": "orders" }
+                                    ]
+                                }
+                            });
+                        });
+                    </script>
+
+
+                    <!--  START Chatstack Live Chat HTML Code - chatstack.com -->
+
+                    <!-- Customers Table -->
+
+            </main>
+
+            <!-- Customers Table -->
+            <footer>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+
+</html>
