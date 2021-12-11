@@ -27,6 +27,8 @@ body {
   width: 280px;
 }
 
+
+
 /* The popup chat - hidden by default */
 .chat-popup {
   display: none;
