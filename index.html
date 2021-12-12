@@ -12,13 +12,16 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js">
 
     </script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+
 
 
 
@@ -36,20 +39,20 @@
         <a href="#">Reports</a>
         <a href="#">Customers</a>
 
-      </div>
-      
-     
-      
-        <span id="main" class="openbtn" onclick="openNav()">☰</span>  
+    </div>
+
+
+
+    <span id="main" class="openbtn" onclick="openNav()">☰</span>
 
 
     <!-- page content -->
     <div class="container-fluid">
-        
+
         <div class="mb-3 mt-3">
             <li>Home Page</li>
         </div>
-            <!-- Navbar -->
+        <!-- Navbar -->
         <div>
             <nav class="navbar navbar-light bg-light ">
                 <div class="container-fluid">
@@ -73,22 +76,22 @@
                             <button type="button" class="btn btn-primary">
                                 <i class="fas fa-search"></i>
                             </button>
-                            
-                        <!------ Navbar login--------->
+
+                            <!------ Navbar login--------->
                             <div class="align-self-center m-1">
-                                <a  onclick="myFunction2()">
+                                <a onclick="myFunction2()">
                                     <i style='font-size:28px' class='fas'>&#xf406;</i>
-                                    
+
                                 </a>
                             </div>
                         </form>
-                        <div  class="d-flex justify-content-end">
-                        <div id="myLinks2" class="dropdown-menu text-small shadow">
-                            <a href="#news" class="dropdown-item">settings</a>
-                            <a href="#contact" class="dropdown-item">New Orders</a>
-                            <a href="#about" class="dropdown-item">Logout</a>
+                        <div class="d-flex justify-content-end">
+                            <div id="myLinks2" class="dropdown-menu text-small shadow">
+                                <a href="#news" class="dropdown-item">settings</a>
+                                <a href="#contact" class="dropdown-item">New Orders</a>
+                                <a href="#about" class="dropdown-item">Logout</a>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </nav>
@@ -210,22 +213,23 @@
                                 <span class="m-lg-2">Customers</span>
                             </div>
                             <div class="card-body">
+                                <table id="table" class="display" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="name">name</th>
+                                            <th data-field="address">address</th>
+                                            <th data-field="city">city</th>
+                                            <th data-field="age">age</th>
+                                            <th data-field="last visit">last visit</th>
+                                            <th data-field="orders">orders</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        
+                                    </tfoot>
+                                </table>
 
-                                <div class="container">
-                                    <table id="table" data-height="460">
-                                        <thead>
-                                            <tr>
-                                                <th data-field="name">name</th>
-                                                <th data-field="address">address</th>
-                                                <th data-field="city">city</th>
-                                                <th data-field="age">age</th>
-                                                <th data-field="last visit">last visit</th>
-                                                <th data-field="orders">orders</th>
 
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -239,7 +243,7 @@
 
                 <body>
 
-<!---chat-----
+                    <!---chat-----
                     <button class="open-button" onclick="openForm()">Chat</button>
                     --->
                     <div class="d-flex justify-content-end chat-popup">
@@ -257,15 +261,15 @@
                         </form>
                     </div>
                     <script>
- function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-      }
+                        function openNav() {
+                            document.getElementById("mySidebar").style.width = "250px";
+                            document.getElementById("main").style.marginLeft = "250px";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("mySidebar").style.width = "0";
+                            document.getElementById("main").style.marginLeft = "0";
+                        }
 
                         function myFunction() {
                             var x = document.getElementById("myLinks");
@@ -324,23 +328,37 @@
 
 
                         $(document).ready(function () {
-                            $('#table').DataTable({
-                                'ajax': {
-                                    'url': '/json/data.json',
-                                    'dataSrc': 'data',
-                                    'columns': [
-                                        { "data": "name" },
-                                        { "data": "address" },
-                                        { "data": "city" },
-                                        { "data": "age" },
-                                        { "data": "last visit" },
-                                        { "data": "orders" }
-                                    ]
-                                }
+                            $('#tableR').DataTable({
+                                'ajax': '/json/data.json',
+                                'dataSrc': 'data',
+                                'columns': [
+                                    { "data": "name" },
+                                    { "data": "address" },
+                                    { "data": "city" },
+                                    { "data": "age" },
+                                    { "data": "last visit" },
+                                    { "data": "orders" }
+                                ]
+
                             });
                         });
                     </script>
-
+                    <script>
+                        $(document).ready(function () {
+                            $('#table').DataTable({
+                                "ajax": '/json/data.json',
+                                'dataSrc': 'data',
+                                'columns': [
+                                    { "data": "name" },
+                                    { "data": "address" },
+                                    { "data": "city" },
+                                    { "data": "age" },
+                                    { "data": "last visit" },
+                                    { "data": "orders" }
+                                ]
+                            });
+                        });
+                    </script>
 
                     <!--  START Chatstack Live Chat HTML Code - chatstack.com -->
 
@@ -358,6 +376,8 @@
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="js/charts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
