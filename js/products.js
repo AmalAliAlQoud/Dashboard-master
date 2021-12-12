@@ -58,28 +58,27 @@ const products = [
 ];
 
 
-document.getElementById('product').innerHTML=products.map(element=>
-  
-`<div class="card mb-3">
-<div class="row no-gutters">
-    <div class="col-3">
-        <img class="img-thumbnail"
-            src="${element.image}"
-            class="img-fluid" alt="">
-    </div>
-    <div class="col-6">
-        <div class="card-block px-2">
-            <h4 class="card-title">${element.name}</h4>
-            <p class="fw-lighter">${element.description}</div>
-    </div>
-    <div class="col-3">
-        <h4 class="m-lg-2">${element.price}SAR</h4>
-        <h5 class="fw-lighter m-lg-2">${element.status}</h5>
-        <div class="d-grid gap-2 m-lg-2">
-            <button type="button" class="btn btn-warning">Details</button>
-            <button type="button" class="btn btn-info">Delete</button>
-        </div>
-    </div>
-</div>
-</div>`
- )
+document.getElementById('product').innerHTML = products.map(element =>
+  `<div class="card mb-3">
+  <div class="row no-gutters">
+      <div class="col-3">
+          <img class="img-thumbnail"
+              src="${element.image}"
+              class="img-fluid" alt="">
+      </div>
+      <div class="col-6">
+          <div class="card-block px-2">
+              <h4 class="card-title">${element.name}</h4>
+              <p class="fw-lighter">${element.description}</div>
+      </div>
+      <div class="col-3">
+          <h4 class="m-lg-2">${element.price}SAR</h4>
+          <h5 class="fw-lighter m-lg-2">${element.status}</h5>
+          <div class="d-grid gap-2 m-lg-2">
+              <button type="button" class="btn btn-warning">Details</button>
+              <button type="button" class="btn btn-info">Delete</button>
+           </div>
+      </div>
+      </div>
+      </div>`
+)
