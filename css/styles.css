@@ -59,7 +59,7 @@ body {
 
 /* When the textarea gets focus, do something */
 .form-container textarea:focus {
-  background-color: #ddd;
+  background-color: white;
   outline: none;
 }
 
