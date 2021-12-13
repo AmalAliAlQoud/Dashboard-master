@@ -75,8 +75,8 @@ document.getElementById('product').innerHTML = products.map(element =>
           <h4 class="m-lg-2">${element.price}SAR</h4>
           <h5 class="fw-lighter m-lg-2">${element.status}</h5>
           <div class="d-grid gap-2 m-lg-2">
-              <button type="button" class="btn btn-warning">Details</button>
-              <button type="button" class="btn btn-info">Delete</button>
+              <button type="button" class="btn bg-purple">Details</button>
+              <button type="button" class="btn bg-pink">Delete</button>
            </div>
       </div>
       </div>

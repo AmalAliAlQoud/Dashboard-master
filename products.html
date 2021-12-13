@@ -23,58 +23,58 @@
         <!-- page content -->
         <div>
             <!-- ------------Navbar ---------------->
-            <nav class="navbar navbar-light bg-info ">
-                <div class="container-fluid">
-                    <div id="mySidebar" class="sidebar">
-                        <!-- ------------sidebar ---------------->
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <h3 class="text-light">Nrt Solution</h3>
-                        <a href="index.html">home</a>
-                        <a href="products.html">Products</a>
-                        <a href="orders.html">Orders</a>
-                        <a href="report.html">Reports</a>
-                        <a href="customers.html">Customers</a>
+        <nav class="navbar navbar-light bg-purple">
+            <div class="container-fluid">
+                <div id="mySidebar" class="sidebar bg-purple">
+                    <!-- ------------sidebar ---------------->
+                    <a href="javascript:void(0)" class="closebtn bg-purple" onclick="closeNav()">×</a>
+                    <h3 class="text-light">Nrt Solution</h3>
+                    <a class="text-light" href="index.html">home</a>
+                    <a class="text-light" href="products.html">Products</a>
+                    <a class="text-light" href="orders.html">Orders</a>
+                    <a class="text-light" href="report.html">Reports</a>
+                    <a class="text-light" href="customers.html">Customers</a>
+                </div>
+                <!-- ------------nav title ---------------->
+                <span id="main" class="openbtn bg-purple" onclick="openNav()">☰</span>
+                <a class="navbar-brand topnav fs-2 text-light">Nrt Solution</a>
+                <div>
+                    <!-- ------------nav title  liists---------------->
+                    <a href="#home"></a>
+                    <div id="myLinks" class="dropdown-menu text-small shadow">
+                        <a href="#news" class="dropdown-item">News</a>
+                        <a href="#contact" class="dropdown-item">Contact</a>
+                        <a href="#about" class="dropdown-item">About</a>
                     </div>
-                    <!-- ------------nav title ---------------->
-                    <span id="main" class="openbtn" onclick="openNav()">☰</span>
-                    <a class="navbar-brand topnav fs-2">Nrt Solution</a>
-                    <div>
-                        <!-- ------------nav title  liists---------------->
-                        <a href="#home"></a>
-                        <div id="myLinks" class="dropdown-menu text-small shadow">
-                            <a href="#news" class="dropdown-item">News</a>
-                            <a href="#contact" class="dropdown-item">Contact</a>
-                            <a href="#about" class="dropdown-item">About</a>
+                    <a href="javascript:void(0);" class="icon " onclick="myFunction()">
+                        <i class="fa fa-bars fs-4"></i>
+                    </a>
+                </div>
+                <!------ Navbar search--------->
+                <div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button type="button" class="btn btn-primary bg-pink">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <!------ Navbar login--------->
+                        <div class="align-self-center m-1">
+                            <a onclick="myFunction2()">
+                                <i style='font-size:28px' class='fas'>&#xf406;</i>
+                            </a>
                         </div>
-                        <a href="javascript:void(0);" class="icon " onclick="myFunction()">
-                            <i class="fa fa-bars fs-4"></i>
-                        </a>
-                    </div>
-                    <!------ Navbar search--------->
-                    <div>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button type="button" class="btn btn-primary">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <!------ Navbar login--------->
-                            <div class="align-self-center m-1">
-                                <a onclick="myFunction2()">
-                                    <i style='font-size:28px' class='fas'>&#xf406;</i>
-                                </a>
-                            </div>
-                        </form>
-                        <div class="d-flex justify-content-end">
-                            <div id="myLinks2" class="dropdown-menu text-small shadow">
-                                <a href="#news" class="dropdown-item">settings</a>
-                                <a href="#contact" class="dropdown-item">New Orders</a>
-                                <a href="#about" class="dropdown-item">Logout</a>
-                            </div>
+                    </form>
+                    <div class="d-flex justify-content-end">
+                        <div id="myLinks2" class="dropdown-menu text-small shadow">
+                            <a href="#news" class="dropdown-item">settings</a>
+                            <a href="#contact" class="dropdown-item">New Orders</a>
+                            <a href="#about" class="dropdown-item">Logout</a>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
         <!-- Body -->
 
         <body>
